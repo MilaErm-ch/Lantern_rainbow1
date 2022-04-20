@@ -9,12 +9,40 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 
-
+    fileprivate func colorRainbow() {
+        // view.backgroundColor = .green
+        
+        let isLightColor = Int.random(in: 1...7)
+        
+        switch isLightColor {
+        case 1:
+            view.backgroundColor = .blue
+        case 2:
+            view.backgroundColor = .green
+        case 3:
+            view.backgroundColor = .white
+        case 4:
+            view.backgroundColor = .orange
+        case 5:
+            view.backgroundColor = .yellow
+        case 6:
+            view.backgroundColor = .red
+        default:
+            view.backgroundColor = .black
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        colorRainbow()
+    }
+    @IBAction func buttonPressed() {
+        colorRainbow()
+    }
+    
+    
 }
-
