@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     }
 
     fileprivate func colorRainbow() {
-        // view.backgroundColor = .green
         
         let isLightColor = Int.random(in: 1...7)
         
